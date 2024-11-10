@@ -1,0 +1,27 @@
+name: Shell Commands with the Checkout Action
+# Workflow name
+
+on: [push]
+# Trigger the workflow on push events
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    # The runner OS
+
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -a
+        # This step will print the working directory and list all files
+
+      - name: Checkout
+        uses: actions/checkout@v1
+        # This step checks out your repository's code
+
+      - name: List Files After Checkout
+        run: |
+          pwd
+          ls -a
+        # This step lists the files again after checking out the repository
