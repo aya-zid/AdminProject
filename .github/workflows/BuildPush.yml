@@ -25,10 +25,10 @@ jobs:
 
       - name: Build image
         run: |
-          docker image build -t ayazid/simplewebdev-f -f Dockerfile.dev .
-        # Build the Docker image with a tag 'ayazid/simplewebdev-f' using Dockerfile.dev
+          docker image build -t ayazid/simplewebdev -f Dockerfile.dev .
+        # Build the Docker image with a tag 'ayazid/simplewebdev' using Dockerfile.dev
 
       - name: Push image
         run: |
-          docker image push ayazid/simplewebdev-f
+          docker image push ayazid/simplewebdev
         # Push the image to Docker Hub with the same tag
